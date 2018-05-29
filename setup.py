@@ -2,13 +2,10 @@ from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name='pre-commit-hooks-safety',
-    description='A pre-commit hook to check your Python dependencies against safety-db',
-    url='https://github.com/Lucas-C/pre-commit-hooks-safety',
-    version='1.1.0',
+    name='pre-commit-sql-formatter',
+    version='1.0.0',
 
-    author='Lucas Cimon',
-    author_email='lucas.cimon@gmail.com',
+    author='Alex Silva',
 
     platforms='linux',
     classifiers=[
@@ -25,11 +22,11 @@ setup(
 
     packages=find_packages('.'),
     install_requires=[
-        'safety',
+        'sqlparse',
     ],
     entry_points={
         'console_scripts': [
-            'safety_check = pre_commit_hooks.safety_check:main',
+            'sql_formatter = pre_commit_hooks.sql_formatter:main',
         ],
     },
 )
