@@ -6,6 +6,7 @@ def main(argv=sys.argv[1:]):
     try:
         print(argv)
         print(" ".join(argv))
+        print("echo '%s' | xargs -I WORD sqlformat WORD -o WORD --wrap_after 90 -k lower" % " ".join(argv))
         os.system("echo '%s' | xargs -I WORD sqlformat WORD -o WORD --wrap_after 90 -k lower" % " ".join(argv))
 
         #check.main(['--full-report'] + sum((['-r', f] for f in argv), []))
