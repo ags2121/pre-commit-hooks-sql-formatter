@@ -3,4 +3,4 @@
     description: Format SQL.
     entry: sql_formatter
     language: python
-    files: [sql]
+    types: [sql]
