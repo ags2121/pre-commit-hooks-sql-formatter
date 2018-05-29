@@ -3,6 +3,7 @@ import sqlparse
 
 def main(argv=sys.argv[1:]):
     try:
+        print(argv)
         #check.main(['--full-report'] + sum((['-r', f] for f in argv), []))
     except SystemExit as error:
         if error.code == 0:
